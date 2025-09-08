@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - MotherNature</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'nature-green': '#4CAF50',
+                        'forest-green': '#2E7D32',
+                        'leaf-green': '#8BC34A',
+                        'sunshine-yellow': '#FFC107',
+                        'vibrant-orange': '#FF9800',
+                        'fresh-blue': '#03DAC6',
+                        'coral-pink': '#FF7043',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed top-0 w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-leaf text-3xl text-nature-green animate-pulse"></i>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-nature-green to-leaf-green bg-clip-text text-transparent">MotherNature</span>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-nature-green transition-colors">Home</a>
+                    <a href="products.html" class="text-gray-700 hover:text-nature-green transition-colors">Products</a>
+                    <a href="recipes.html" class="text-gray-700 hover:text-nature-green transition-colors">Recipes</a>
+                    <a href="blog.html" class="text-nature-green font-semibold">Blog</a>
+                </nav>
+                
+                <div class="flex items-center space-x-3">
+                    <!-- Search Button -->
+                    <button class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-search text-nature-green group-hover:text-white transition-colors duration-300"></i>
+                        <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                    </button>
+                    
+                    <!-- Shopping Cart Button -->
+                    <a href="checkout.html" class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-shopping-cart text-nature-green group-hover:text-white transition-colors duration-300"></i>
+                        <span class="absolute -top-1 -right-1 bg-gradient-to-r from-vibrant-orange to-coral-pink text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center shadow-lg animate-pulse border-2 border-white">3</span>
+                        <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                    </a>
+                    
+                    <!-- Profile Button -->
+                    <a href="profile.html" class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-nature-green">
+                        <i class="fas fa-user text-nature-green group-hover:text-white transition-colors duration-300"></i>
+                        <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-20 bg-gradient-to-br from-leaf-green via-nature-green to-forest-green text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-5xl font-bold mb-4">📝 Health & Wellness Blog</h1>
+                <p class="text-xl opacity-90 mb-8">Discover natural living tips, wellness advice, and sustainable lifestyle insights</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-white text-nature-green px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                        Latest Articles
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-nature-green transition-colors">
+                        Subscribe Newsletter
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Featured Article -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                    <div class="bg-gradient-to-br from-sunshine-yellow to-vibrant-orange p-12 flex items-center">
+                        <div>
+                            <span class="bg-white text-vibrant-orange px-4 py-2 rounded-full text-sm font-bold mb-4 inline-block">Featured Article</span>
+                            <h2 class="text-3xl font-bold text-white mb-4">🌱 The Ultimate Guide to Organic Living</h2>
+                            <p class="text-white opacity-90 mb-6">Discover how to transition to a completely organic lifestyle with our comprehensive guide covering food, skincare, and home products.</p>
+                            <button class="bg-white text-vibrant-orange px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                                Read Full Article
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 p-8 flex items-center justify-center">
+                        <div class="text-8xl">🌿</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Categories -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">📚 Browse by Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow cursor-pointer">
+                    <div class="text-4xl mb-3">🥗</div>
+                    <h3 class="font-semibold text-gray-800">Nutrition</h3>
+                    <p class="text-sm text-gray-600 mt-2">12 articles</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow cursor-pointer">
+                    <div class="text-4xl mb-3">🧘‍♀️</div>
+                    <h3 class="font-semibold text-gray-800">Wellness</h3>
+                    <p class="text-sm text-gray-600 mt-2">8 articles</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow cursor-pointer">
+                    <div class="text-4xl mb-3">🌍</div>
+                    <h3 class="font-semibold text-gray-800">Sustainability</h3>
+                    <p class="text-sm text-gray-600 mt-2">15 articles</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow cursor-pointer">
+                    <div class="text-4xl mb-3">🏠</div>
+                    <h3 class="font-semibold text-gray-800">Home & Garden</h3>
+                    <p class="text-sm text-gray-600 mt-2">10 articles</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Articles -->
+        <section>
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">📰 Recent Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="bg-gradient-to-r from-nature-green to-leaf-green h-48 flex items-center justify-center">
+                        <div class="text-6xl">🥬</div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-nature-green font-semibold">NUTRITION • 5 MIN READ</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Top 10 Superfoods for Daily Energy</h3>
+                        <p class="text-gray-600 mb-4">Boost your energy naturally with these nutrient-packed superfoods that will keep you energized throughout the day.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Dec 15, 2024</span>
+                            <button class="text-nature-green font-semibold hover:underline">Read More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="bg-gradient-to-r from-fresh-blue to-coral-pink h-48 flex items-center justify-center">
+                        <div class="text-6xl">🧴</div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-fresh-blue font-semibold">WELLNESS • 7 MIN READ</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">DIY Natural Skincare Recipes</h3>
+                        <p class="text-gray-600 mb-4">Create your own natural skincare products at home with these simple, effective recipes using organic ingredients.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Dec 12, 2024</span>
+                            <button class="text-nature-green font-semibold hover:underline">Read More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="bg-gradient-to-r from-sunshine-yellow to-vibrant-orange h-48 flex items-center justify-center">
+                        <div class="text-6xl">🌱</div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-vibrant-orange font-semibold">SUSTAINABILITY • 4 MIN READ</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Zero Waste Kitchen Tips</h3>
+                        <p class="text-gray-600 mb-4">Transform your kitchen into a zero-waste zone with these practical tips for reducing food waste and plastic use.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Dec 10, 2024</span>
+                            <button class="text-nature-green font-semibold hover:underline">Read More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="bg-gradient-to-r from-leaf-green to-forest-green h-48 flex items-center justify-center">
+                        <div class="text-6xl">🏡</div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-forest-green font-semibold">HOME & GARDEN • 6 MIN READ</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Indoor Herb Garden Setup</h3>
+                        <p class="text-gray-600 mb-4">Learn how to create a thriving indoor herb garden that provides fresh ingredients year-round for your cooking.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Dec 8, 2024</span>
+                            <button class="text-nature-green font-semibold hover:underline">Read More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="bg-gradient-to-r from-coral-pink to-sunshine-yellow h-48 flex items-center justify-center">
+                        <div class="text-6xl">🍯</div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-coral-pink font-semibold">NUTRITION • 5 MIN READ</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Natural Sweeteners Guide</h3>
+                        <p class="text-gray-600 mb-4">Discover healthy alternatives to refined sugar with our comprehensive guide to natural sweeteners and their benefits.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Dec 5, 2024</span>
+                            <button class="text-nature-green font-semibold hover:underline">Read More</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div class="bg-gradient-to-r from-nature-green to-fresh-blue h-48 flex items-center justify-center">
+                        <div class="text-6xl">💚</div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-nature-green font-semibold">WELLNESS • 8 MIN READ</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-3">Mindful Eating Practices</h3>
+                        <p class="text-gray-600 mb-4">Transform your relationship with food through mindful eating practices that promote better digestion and satisfaction.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Dec 3, 2024</span>
+                            <button class="text-nature-green font-semibold hover:underline">Read More</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="mt-16 bg-gradient-to-r from-nature-green to-leaf-green rounded-2xl p-8 text-white text-center">
+            <h2 class="text-3xl font-bold mb-4">📧 Stay Updated with Our Newsletter</h2>
+            <p class="text-xl opacity-90 mb-8">Get the latest articles, tips, and exclusive content delivered to your inbox weekly</p>
+            <div class="max-w-md mx-auto flex gap-4">
+                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
+                <button class="bg-white text-nature-green px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                    Subscribe
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-forest-green text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-leaf text-2xl text-leaf-green"></i>
+                        <span class="text-xl font-bold">MotherNature</span>
+                    </div>
+                    <p class="text-gray-300">Your trusted source for natural, organic, and sustainable living.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="productos.html" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="recetas.html" class="hover:text-white transition-colors">Recipes</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Categories</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">Nutrition</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Wellness</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Home & Garden</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 MotherNature. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

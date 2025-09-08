@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MotherNature</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'nature-green': '#4CAF50',
+                        'forest-green': '#2E7D32',
+                        'leaf-green': '#8BC34A',
+                        'sunshine-yellow': '#FFC107',
+                        'vibrant-orange': '#FF9800',
+                        'fresh-blue': '#03DAC6',
+                        'coral-pink': '#FF7043',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed top-0 w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-leaf text-3xl text-nature-green animate-pulse"></i>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-nature-green to-leaf-green bg-clip-text text-transparent">MotherNature</span>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-nature-green transition-colors">Home</a>
+                    <a href="products.html" class="text-gray-700 hover:text-nature-green transition-colors">Products</a>
+                    <a href="recipes.html" class="text-gray-700 hover:text-nature-green transition-colors">Recipes</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-nature-green transition-colors">Blog</a>
+                    <a href="about.html" class="text-nature-green font-semibold">About</a>
+                </nav>
+                
+                <div class="flex items-center space-x-3">
+                    <!-- Search Button -->
+                    <button class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-search text-nature-green group-hover:text-white transition-colors duration-300"></i>
+                        <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                    </button>
+                    
+                    <!-- Shopping Cart Button -->
+                    <a href="checkout.html" class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-shopping-cart text-nature-green group-hover:text-white transition-colors duration-300"></i>
+                        <span class="absolute -top-1 -right-1 bg-gradient-to-r from-vibrant-orange to-coral-pink text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center shadow-lg animate-pulse border-2 border-white">3</span>
+                        <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                    </a>
+                    
+                    <!-- Profile Button -->
+                    <a href="profile.html" class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-nature-green">
+                        <i class="fas fa-user text-nature-green group-hover:text-white transition-colors duration-300"></i>
+                        <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-20 bg-gradient-to-br from-leaf-green via-nature-green to-forest-green text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-5xl font-bold mb-4">🌿 About MotherNature</h1>
+                <p class="text-xl opacity-90 mb-8">Nurturing health, wellness, and sustainability for a better tomorrow</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Our Story -->
+        <section class="mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">🌱 Our Story</h2>
+                    <p class="text-gray-600 mb-4">
+                        Founded in 2020, MotherNature was born from a simple belief: everyone deserves access to pure, natural, and sustainable products that nourish both body and soul. Our journey began when our founders, passionate about organic living, noticed the lack of truly authentic natural products in the market.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        What started as a small initiative to source the finest organic ingredients has grown into a comprehensive platform dedicated to promoting holistic wellness and environmental consciousness. We partner directly with local farmers, artisans, and sustainable producers to bring you products that are not just good for you, but good for the planet.
+                    </p>
+                    <p class="text-gray-600">
+                        Today, MotherNature serves thousands of health-conscious customers across India, providing everything from organic foods and natural skincare to eco-friendly home products and wellness supplements.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-sunshine-yellow to-vibrant-orange rounded-2xl p-12 text-center">
+                    <div class="text-8xl mb-4">🌍</div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Our Impact</h3>
+                    <p class="text-white opacity-90">Supporting 500+ local farmers and reducing 10,000+ plastic bottles through sustainable packaging</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Mission & Vision -->
+        <section class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
+                    <p class="text-gray-600">
+                        To make natural, organic, and sustainable living accessible to everyone by providing high-quality products, educational resources, and a supportive community that empowers individuals to make healthier choices for themselves and the environment.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-4xl mb-4">👁️</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Vision</h3>
+                    <p class="text-gray-600">
+                        To create a world where natural living is the norm, not the exception. We envision a future where every household has access to pure, sustainable products and the knowledge to live in harmony with nature.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Values -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">💚 Our Core Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-nature-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-leaf text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Authenticity</h3>
+                    <p class="text-gray-600">We source only genuine, certified organic products with complete transparency about their origin and production methods.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-fresh-blue w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-recycle text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Sustainability</h3>
+                    <p class="text-gray-600">Every decision we make considers its environmental impact, from packaging to partnerships with eco-conscious suppliers.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-vibrant-orange w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Wellness</h3>
+                    <p class="text-gray-600">We believe in holistic health that encompasses physical, mental, and environmental well-being for all our customers.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">👥 Meet Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <div class="w-24 h-24 bg-gradient-to-r from-nature-green to-leaf-green rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">👩‍💼</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Priya Sharma</h3>
+                    <p class="text-nature-green font-semibold mb-3">Founder & CEO</p>
+                    <p class="text-gray-600 text-sm">Passionate about organic living with 10+ years in sustainable business development.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <div class="w-24 h-24 bg-gradient-to-r from-fresh-blue to-coral-pink rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">👨‍🔬</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Dr. Rajesh Kumar</h3>
+                    <p class="text-fresh-blue font-semibold mb-3">Head of Product Quality</p>
+                    <p class="text-gray-600 text-sm">Certified nutritionist ensuring all products meet the highest quality and safety standards.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <div class="w-24 h-24 bg-gradient-to-r from-sunshine-yellow to-vibrant-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">👩‍🌾</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Anita Patel</h3>
+                    <p class="text-vibrant-orange font-semibold mb-3">Sustainability Director</p>
+                    <p class="text-gray-600 text-sm">Environmental advocate working to minimize our ecological footprint and support local communities.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Awards -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">🏆 Certifications & Recognition</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-3xl mb-3">🌿</div>
+                    <h3 class="font-semibold text-gray-800 text-sm">Organic India Certified</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-3xl mb-3">✅</div>
+                    <h3 class="font-semibold text-gray-800 text-sm">FSSAI Licensed</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-3xl mb-3">🌍</div>
+                    <h3 class="font-semibold text-gray-800 text-sm">Carbon Neutral Business</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg text-center">
+                    <div class="text-3xl mb-3">⭐</div>
+                    <h3 class="font-semibold text-gray-800 text-sm">Best Organic Brand 2024</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="bg-gradient-to-r from-nature-green to-leaf-green rounded-2xl p-8 text-white text-center">
+            <h2 class="text-3xl font-bold mb-4">🤝 Join Our Mission</h2>
+            <p class="text-xl opacity-90 mb-8">Ready to embrace natural living? Connect with us and be part of the MotherNature community</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-white text-nature-green px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                    Contact Us
+                </a>
+                <a href="productos.html" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-nature-green transition-colors">
+                    Shop Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-forest-green text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-leaf text-2xl text-leaf-green"></i>
+                        <span class="text-xl font-bold">MotherNature</span>
+                    </div>
+                    <p class="text-gray-300">Your trusted source for natural, organic, and sustainable living.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="productos.html" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="recetas.html" class="hover:text-white transition-colors">Recipes</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 MotherNature. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

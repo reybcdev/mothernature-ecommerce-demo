@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotherNature - Natural & Organic Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'nature-green': '#4CAF50',
+                        'forest-green': '#2E7D32',
+                        'leaf-green': '#8BC34A',
+                        'sunshine-yellow': '#FFC107',
+                        'vibrant-orange': '#FF9800',
+                        'fresh-blue': '#03DAC6',
+                        'coral-pink': '#FF7043',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed top-0 w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-leaf text-3xl text-nature-green animate-pulse"></i>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-nature-green to-leaf-green bg-clip-text text-transparent">MotherNature</span>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-nature-green font-semibold">Home</a>
+                    <a href="products.html" class="text-gray-700 hover:text-nature-green transition-colors">Products</a>
+                    <a href="recipes.html" class="text-gray-700 hover:text-nature-green transition-colors">Recipes</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-nature-green transition-colors">Blog</a>
+                    <a href="about.html" class="text-gray-700 hover:text-nature-green transition-colors">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-nature-green transition-colors">Contact</a>
+                </nav>
+                
+                <div class="flex items-center space-x-3">
+                    <!-- Search Button -->
+                    <button class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-search text-nature-green group-hover:text-white transition-colors duration-300"></i>
+                        <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                    </button>
+                    
+                    <!-- Shopping Cart Button -->
+                    <a href="checkout.html" class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-shopping-cart text-nature-green group-hover:text-white transition-colors duration-300"></i>
+                        <span class="absolute -top-1 -right-1 bg-gradient-to-r from-vibrant-orange to-coral-pink text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center shadow-lg animate-pulse border-2 border-white">3</span>
+                        <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                    </a>
+                    
+                    <!-- Profile Button -->
+                    <a href="profile.html" class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-nature-green">
+                        <i class="fas fa-user text-nature-green group-hover:text-white transition-colors duration-300"></i>
+                        <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="group relative p-3 hover:bg-gray-200 hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105 md:hidden">
+                        <i class="fas fa-bars text-gray-600 group-hover:text-gray-800 transition-colors duration-300"></i>
+                        <div class="absolute inset-0 bg-gray-200 opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-20 bg-gradient-to-br from-leaf-green via-nature-green to-forest-green text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-5xl lg:text-6xl font-bold mb-6">
+                        Discover the Power of <span class="text-sunshine-yellow">Nature</span>
+                    </h1>
+                    <p class="text-xl mb-8 opacity-90">
+                        Organic and natural products that nourish your body and soul. From Mumbai to all of India, we bring nature's best to your table.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="productos.html" class="bg-sunshine-yellow hover:bg-vibrant-orange text-gray-800 font-semibold px-8 py-4 rounded-full transition-all transform hover:scale-105 hover:shadow-lg">
+                            Explore Products
+                        </a>
+                        <a href="recetas.html" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-nature-green font-semibold px-8 py-4 rounded-full transition-all">
+                            View Recipes
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white bg-opacity-20 rounded-3xl p-8 backdrop-blur-sm">
+                        <div class="text-8xl mb-4">🌱</div>
+                        <div class="text-2xl font-semibold">100% Natural</div>
+                        <div class="text-lg opacity-80">Certified Organic</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">🏷️ Featured Categories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <a href="productos.html" class="group bg-gradient-to-br from-coral-pink to-vibrant-orange rounded-2xl p-6 text-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-6xl mb-4 group-hover:scale-110 transition-transform">🥬</div>
+                    <h3 class="text-2xl font-bold mb-2">Fresh</h3>
+                    <p class="opacity-90 mb-3">Mumbai</p>
+                    <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Mumbai Only</span>
+                </a>
+                <a href="productos.html" class="group bg-gradient-to-br from-leaf-green to-nature-green rounded-2xl p-6 text-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-6xl mb-4 group-hover:scale-110 transition-transform">🌾</div>
+                    <h3 class="text-2xl font-bold mb-2">Grains</h3>
+                    <p class="opacity-90 mb-3">Pan India</p>
+                    <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Pan India</span>
+                </a>
+                <a href="productos.html" class="group bg-gradient-to-br from-sunshine-yellow to-vibrant-orange rounded-2xl p-6 text-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-6xl mb-4 group-hover:scale-110 transition-transform">🍯</div>
+                    <h3 class="text-2xl font-bold mb-2">Honey</h3>
+                    <p class="opacity-90 mb-3">Pan India</p>
+                    <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Pan India</span>
+                </a>
+                <a href="productos.html" class="group bg-gradient-to-br from-fresh-blue to-nature-green rounded-2xl p-6 text-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-6xl mb-4 group-hover:scale-110 transition-transform">🧴</div>
+                    <h3 class="text-2xl font-bold mb-2">Beverages</h3>
+                    <p class="opacity-90 mb-3">Pan India</p>
+                    <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Pan India</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">⭐ Featured Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center text-6xl">🥬</div>
+                        <div class="absolute top-4 left-4 bg-vibrant-orange text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            -33% OFF
+                        </div>
+                        <button class="absolute top-4 right-4 p-2 bg-white rounded-full shadow-md hover:bg-red-50 transition-colors">
+                            <i class="far fa-heart text-gray-400 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">Organic Spinach</h3>
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                            <span class="text-sm text-gray-600 ml-2">4.8 (234 reviews)</span>
+                        </div>
+                        <div class="flex items-center space-x-2 mb-2">
+                            <span class="text-gray-400 line-through">₹299</span>
+                            <span class="text-2xl font-bold text-nature-green">₹199</span>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-4">🚚 Delivery today (Mumbai)</div>
+                        <button class="w-full bg-gradient-to-r from-nature-green to-leaf-green text-white py-3 rounded-full hover:shadow-lg transition-all transform hover:scale-105">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center text-6xl">🌾</div>
+                        <div class="absolute top-4 left-4 bg-vibrant-orange text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            -22% OFF
+                        </div>
+                        <button class="absolute top-4 right-4 p-2 bg-white rounded-full shadow-md hover:bg-red-50 transition-colors">
+                            <i class="far fa-heart text-gray-400 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">Premium Bolivian Quinoa</h3>
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                            <span class="text-sm text-gray-600 ml-2">4.9 (156 reviews)</span>
+                        </div>
+                        <div class="flex items-center space-x-2 mb-2">
+                            <span class="text-gray-400 line-through">₹450</span>
+                            <span class="text-2xl font-bold text-nature-green">₹350</span>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-4">🚚 Delivery in 3 days (Pan India)</div>
+                        <button class="w-full bg-gradient-to-r from-nature-green to-leaf-green text-white py-3 rounded-full hover:shadow-lg transition-all transform hover:scale-105">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center text-6xl">🍯</div>
+                        <div class="absolute top-4 left-4 bg-vibrant-orange text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            -17% OFF
+                        </div>
+                        <button class="absolute top-4 right-4 p-2 bg-white rounded-full shadow-md hover:bg-red-50 transition-colors">
+                            <i class="far fa-heart text-gray-400 hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">Pure Himalayan Honey</h3>
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                            <span class="text-sm text-gray-600 ml-2">4.7 (89 reviews)</span>
+                        </div>
+                        <div class="flex items-center space-x-2 mb-2">
+                            <span class="text-gray-400 line-through">₹180</span>
+                            <span class="text-2xl font-bold text-nature-green">₹150</span>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-4">🚚 Delivery in 2 days (Pan India)</div>
+                        <button class="w-full bg-gradient-to-r from-nature-green to-leaf-green text-white py-3 rounded-full hover:shadow-lg transition-all transform hover:scale-105">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="productos.html" class="bg-gradient-to-r from-sunshine-yellow to-vibrant-orange text-white px-8 py-3 rounded-full hover:shadow-lg transition-all transform hover:scale-105">
+                    View All Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">📚 Educational Content</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-leaf-green to-nature-green rounded-xl p-6 text-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-6xl mb-4">🥗</div>
+                    <h3 class="text-xl font-bold mb-3">5 Healthy Breakfast Recipes</h3>
+                    <p class="opacity-90 mb-6">Start your day with natural energy</p>
+                    <a href="recetas.html" class="bg-white text-nature-green px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                        Read More
+                    </a>
+                </div>
+                <div class="bg-gradient-to-br from-sunshine-yellow to-vibrant-orange rounded-xl p-6 text-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-6xl mb-4">📖</div>
+                    <h3 class="text-xl font-bold mb-3">Benefits of Superfoods</h3>
+                    <p class="opacity-90 mb-6">Discover nature's nutritional power</p>
+                    <a href="#" class="bg-white text-vibrant-orange px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                        Read More
+                    </a>
+                </div>
+                <div class="bg-gradient-to-br from-fresh-blue to-coral-pink rounded-xl p-6 text-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-6xl mb-4">🎥</div>
+                    <h3 class="text-xl font-bold mb-3">How to Choose Organic Products</h3>
+                    <p class="opacity-90 mb-6">Complete guide for conscious shopping</p>
+                    <a href="#" class="bg-white text-fresh-blue px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                        Watch Video
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-gradient-to-r from-nature-green to-leaf-green text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">📧 Join the MotherNature Family</h2>
+            <p class="text-xl mb-8 opacity-90">Get recipes, health tips and exclusive offers</p>
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email here..." 
+                       class="flex-1 px-6 py-3 text-gray-800 rounded-l-full focus:outline-none">
+                <button class="bg-sunshine-yellow hover:bg-vibrant-orange text-gray-800 font-semibold px-6 py-3 rounded-r-full transition-colors">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-leaf text-3xl text-nature-green"></i>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-nature-green to-leaf-green bg-clip-text text-transparent">MotherNature</span>
+                    </div>
+                    <p class="text-gray-300 mb-6">Connecting nature with your wellness</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-nature-green transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-nature-green transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-nature-green transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-nature-green transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="productos.html" class="text-gray-300 hover:text-nature-green transition-colors">Perishables (Mumbai)</a></li>
+                        <li><a href="productos.html" class="text-gray-300 hover:text-nature-green transition-colors">Non-Perishables</a></li>
+                        <li><a href="productos.html" class="text-gray-300 hover:text-nature-green transition-colors">Offers</a></li>
+                        <li><a href="productos.html" class="text-gray-300 hover:text-nature-green transition-colors">New Products</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Content</h4>
+                    <ul class="space-y-2">
+                        <li><a href="recetas.html" class="text-gray-300 hover:text-nature-green transition-colors">Recipes</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-nature-green transition-colors">Health Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-nature-green transition-colors">Videos</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-nature-green transition-colors">Nutrition Guides</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-nature-green transition-colors">Help Center</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-nature-green transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-nature-green transition-colors">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-nature-green transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 MotherNature. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Chat Widget -->
+    <div class="fixed bottom-4 right-4 z-50">
+        <button class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-110 group">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </button>
+        <div class="absolute bottom-16 right-0 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            Chat with us!
+        </div>
+    </div>
+
+    <!-- Cart Floating -->
+    <div class="fixed bottom-4 left-4 bg-nature-green text-white px-6 py-3 rounded-full shadow-lg cursor-pointer hover:shadow-xl transition-all z-50">
+        <div class="flex items-center space-x-2">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="font-semibold">3 items - ₹567</span>
+        </div>
+    </div>
+
+    <script>
+        // Add to cart functionality
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Add to Cart')) {
+                button.addEventListener('click', function() {
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '✅ Added';
+                    this.classList.remove('from-nature-green', 'to-leaf-green');
+                    this.classList.add('bg-green-600');
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                        this.classList.add('from-nature-green', 'to-leaf-green');
+                        this.classList.remove('bg-green-600');
+                    }, 2000);
+                });
+            }
+        });
+
+        // Heart toggle functionality
+        document.querySelectorAll('.fa-heart').forEach(heart => {
+            heart.addEventListener('click', function() {
+                if (this.classList.contains('far')) {
+                    this.classList.remove('far', 'text-gray-400');
+                    this.classList.add('fas', 'text-red-500');
+                } else {
+                    this.classList.remove('fas', 'text-red-500');
+                    this.classList.add('far', 'text-gray-400');
+                }
+            });
+        });
+
+        // Newsletter form
+        document.querySelector('input[type="email"]').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const email = this.value;
+                if (email) {
+                    alert('Thank you for subscribing! We\'ll send you the best recipes and offers.');
+                    this.value = '';
+                }
+            }
+        });
+
+        document.querySelector('button').addEventListener('click', function() {
+            if (this.textContent.includes('Subscribe')) {
+                const email = document.querySelector('input[type="email"]').value;
+                if (email) {
+                    alert('Thank you for subscribing! We\'ll send you the best recipes and offers.');
+                    document.querySelector('input[type="email"]').value = '';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

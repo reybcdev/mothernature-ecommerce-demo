@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - MotherNature</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'nature-green': '#4CAF50',
+                        'forest-green': '#2E7D32',
+                        'leaf-green': '#8BC34A',
+                        'sunshine-yellow': '#FFC107',
+                        'vibrant-orange': '#FF9800',
+                        'fresh-blue': '#03DAC6',
+                        'coral-pink': '#FF7043',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed top-0 w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-leaf text-3xl text-nature-green animate-pulse"></i>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-nature-green to-leaf-green bg-clip-text text-transparent">MotherNature</span>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-nature-green transition-colors">Home</a>
+                    <a href="productos.html" class="text-gray-700 hover:text-nature-green transition-colors">Products</a>
+                    <a href="recetas.html" class="text-gray-700 hover:text-nature-green transition-colors">Recipes</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-nature-green transition-colors">Blog</a>
+                    <a href="about.html" class="text-gray-700 hover:text-nature-green transition-colors">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-nature-green transition-colors">Contact</a>
+                </nav>
+                
+                <div class="flex items-center space-x-3">
+                    <!-- Search Button -->
+                    <button class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-search text-nature-green group-hover:text-white transition-colors duration-300"></i>
+                        <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                    </button>
+                    
+                    <!-- Shopping Cart Button -->
+                    <a href="checkout.html" class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-shopping-cart text-nature-green group-hover:text-white transition-colors duration-300"></i>
+                        <span class="absolute -top-1 -right-1 bg-gradient-to-r from-vibrant-orange to-coral-pink text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center shadow-lg animate-pulse border-2 border-white">3</span>
+                        <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                    </a>
+                    
+                    <!-- Profile Button -->
+                    <a href="perfil.html" class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105 border-2 border-nature-green bg-nature-green bg-opacity-10">
+                        <i class="fas fa-user text-nature-green group-hover:text-white transition-colors duration-300"></i>
+                        <div class="absolute inset-0 bg-nature-green opacity-10 group-hover:opacity-20 rounded-full transition-opacity duration-300"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Profile Header -->
+        <section class="bg-gradient-to-r from-nature-green to-leaf-green text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
+                    <div class="relative">
+                        <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-6xl backdrop-blur-sm">
+                            👤
+                        </div>
+                        <button class="absolute bottom-2 right-2 bg-sunshine-yellow text-gray-800 p-2 rounded-full hover:bg-vibrant-orange transition-colors">
+                            <i class="fas fa-camera text-sm"></i>
+                        </button>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h1 class="text-4xl font-bold mb-2">Priya Sharma</h1>
+                        <p class="text-xl opacity-90 mb-2">📱 +91 98765 43210</p>
+                        <p class="opacity-80 mb-4">📍 Mumbai, Maharashtra</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <div class="bg-white bg-opacity-20 px-4 py-2 rounded-full">
+                                <span class="font-semibold">🏆 Loyalty Points: 2,450</span>
+                            </div>
+                            <div class="bg-white bg-opacity-20 px-4 py-2 rounded-full">
+                                <span class="font-semibold">🥇 Level: Eco Warrior</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Sidebar Navigation -->
+                <aside class="lg:col-span-1">
+                    <div class="bg-white rounded-xl shadow-lg p-6 sticky top-24">
+                        <nav class="space-y-2">
+                            <a href="#" class="flex items-center space-x-3 p-3 bg-nature-green text-white rounded-lg">
+                                <i class="fas fa-user"></i>
+                                <span>My Profile</span>
+                            </a>
+                            <a href="#" class="flex items-center space-x-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>My Orders</span>
+                            </a>
+                            <a href="#" class="flex items-center space-x-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                                <i class="fas fa-heart"></i>
+                                <span>Favorites</span>
+                            </a>
+                            <a href="#" class="flex items-center space-x-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Addresses</span>
+                            </a>
+                            <a href="#" class="flex items-center space-x-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                                <i class="fas fa-trophy"></i>
+                                <span>Loyalty Program</span>
+                            </a>
+                            <a href="#" class="flex items-center space-x-3 p-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                                <i class="fas fa-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="lg:col-span-3 space-y-8">
+                    <!-- Personal Information -->
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-2xl font-bold text-gray-800">👤 Personal Information</h2>
+                            <button class="text-nature-green hover:text-forest-green">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                <input type="text" value="Priya Sharma" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-nature-green focus:outline-none" readonly>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" value="priya.sharma@email.com" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-nature-green focus:outline-none" readonly>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                                <input type="tel" value="+91 98765 43210" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-nature-green focus:outline-none" readonly>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Date of Birth</label>
+                                <input type="date" value="1992-05-15" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-nature-green focus:outline-none" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Loyalty Program -->
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">🏆 Loyalty Program</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                            <div class="bg-gradient-to-br from-sunshine-yellow to-vibrant-orange rounded-xl p-6 text-white text-center">
+                                <div class="text-4xl mb-2">🏆</div>
+                                <div class="text-2xl font-bold">2,450</div>
+                                <div class="opacity-90">Total Points</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-nature-green to-leaf-green rounded-xl p-6 text-white text-center">
+                                <div class="text-4xl mb-2">🥇</div>
+                                <div class="text-xl font-bold">Eco Warrior</div>
+                                <div class="opacity-90">Current Level</div>
+                            </div>
+                            <div class="bg-gradient-to-br from-fresh-blue to-coral-pink rounded-xl p-6 text-white text-center">
+                                <div class="text-4xl mb-2">🎯</div>
+                                <div class="text-2xl font-bold">550</div>
+                                <div class="opacity-90">To next level</div>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="mb-6">
+                            <div class="flex justify-between text-sm text-gray-600 mb-2">
+                                <span>Progress to next level</span>
+                                <span>82%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-nature-green to-leaf-green h-3 rounded-full" style="width: 82%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Available Rewards -->
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">🎁 Available Rewards</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-nature-green transition-colors">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="font-semibold">10% discount</h4>
+                                        <p class="text-sm text-gray-600">On your next order</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="text-nature-green font-bold">500 pts</div>
+                                        <button class="bg-nature-green text-white px-3 py-1 rounded-full text-sm hover:bg-forest-green transition-colors">
+                                            Redeem
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-4 hover:border-nature-green transition-colors">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="font-semibold">Free shipping</h4>
+                                        <p class="text-sm text-gray-600">On orders ₹300+</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="text-nature-green font-bold">300 pts</div>
+                                        <button class="bg-nature-green text-white px-3 py-1 rounded-full text-sm hover:bg-forest-green transition-colors">
+                                            Redeem
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Orders -->
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-2xl font-bold text-gray-800">📦 Recent Orders</h2>
+                            <a href="#" class="text-nature-green hover:text-forest-green font-semibold">View all</a>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-2xl">🥬</div>
+                                        <div>
+                                            <h4 class="font-semibold">Order #MN001234</h4>
+                                            <p class="text-sm text-gray-600">3 products • ₹567</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Delivered</span>
+                                        <p class="text-sm text-gray-600 mt-1">15 Ene 2025</p>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="flex-1 bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors">
+                                        View details
+                                    </button>
+                                    <button class="flex-1 bg-nature-green text-white py-2 px-4 rounded-lg hover:bg-forest-green transition-colors">
+                                        Reorder
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-2xl">🌾</div>
+                                        <div>
+                                            <h4 class="font-semibold">Order #MN001235</h4>
+                                            <p class="text-sm text-gray-600">2 products • ₹450</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">On the way</span>
+                                        <p class="text-sm text-gray-600 mt-1">Today</p>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="flex-1 bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors">
+                                        Track order
+                                    </button>
+                                    <button class="flex-1 bg-red-100 text-red-700 py-2 px-4 rounded-lg hover:bg-red-200 transition-colors">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Favorite Products -->
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-2xl font-bold text-gray-800">❤️ Favorite Products</h2>
+                            <a href="#" class="text-nature-green hover:text-forest-green font-semibold">View all</a>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="text-center mb-4">
+                                    <div class="text-4xl mb-2">🥬</div>
+                                    <h4 class="font-semibold">Organic Spinach</h4>
+                                    <p class="text-nature-green font-bold">₹199</p>
+                                </div>
+                                <button class="w-full bg-nature-green text-white py-2 rounded-lg hover:bg-forest-green transition-colors">
+                                    Add to cart
+                                </button>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="text-center mb-4">
+                                    <div class="text-4xl mb-2">🌾</div>
+                                    <h4 class="font-semibold">Bolivian Quinoa</h4>
+                                    <p class="text-nature-green font-bold">₹350</p>
+                                </div>
+                                <button class="w-full bg-nature-green text-white py-2 rounded-lg hover:bg-forest-green transition-colors">
+                                    Add to cart
+                                </button>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                                <div class="text-center mb-4">
+                                    <div class="text-4xl mb-2">🍯</div>
+                                    <h4 class="font-semibold">Himalayan Honey</h4>
+                                    <p class="text-nature-green font-bold">₹150</p>
+                                </div>
+                                <button class="w-full bg-nature-green text-white py-2 rounded-lg hover:bg-forest-green transition-colors">
+                                    Add to cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Eco Challenges -->
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">🌱 Eco Challenges</h2>
+                        <div class="space-y-4">
+                            <div class="bg-gradient-to-r from-leaf-green to-nature-green rounded-lg p-4 text-white">
+                                <div class="flex items-center justify-between mb-2">
+                                    <h4 class="font-semibold">🥗 Eat Green for 7 days</h4>
+                                    <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">5/7 days</span>
+                                </div>
+                                <p class="text-sm opacity-90 mb-3">Consume organic green products for a week</p>
+                                <div class="w-full bg-white bg-opacity-20 rounded-full h-2 mb-2">
+                                    <div class="bg-white h-2 rounded-full" style="width: 71%"></div>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span>Progress: 71%</span>
+                                    <span>Reward: 200 pts</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-gradient-to-r from-sunshine-yellow to-vibrant-orange rounded-lg p-4 text-white">
+                                <div class="flex items-center justify-between mb-2">
+                                    <h4 class="font-semibold">♻️ Zero Waste</h4>
+                                    <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">New</span>
+                                </div>
+                                <p class="text-sm opacity-90 mb-3">Buy products with biodegradable packaging</p>
+                                <button class="bg-white text-vibrant-orange px-4 py-2 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                                    Start challenge
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </main>
+
+    <!-- WhatsApp Widget -->
+    <div class="fixed bottom-4 right-4 z-50">
+        <button class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-110">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </button>
+    </div>
+
+    <script>
+        // Tab functionality for sidebar
+        document.querySelectorAll('aside nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                document.querySelectorAll('aside nav a').forEach(l => {
+                    l.classList.remove('bg-nature-green', 'text-white');
+                    l.classList.add('text-gray-700', 'hover:bg-gray-100');
+                });
+                
+                // Add active class to clicked link
+                this.classList.remove('text-gray-700', 'hover:bg-gray-100');
+                this.classList.add('bg-nature-green', 'text-white');
+            });
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Agregar al carrito')) {
+                button.addEventListener('click', function() {
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '✅ Agregado';
+                    this.classList.remove('bg-nature-green');
+                    this.classList.add('bg-green-600');
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                        this.classList.add('bg-nature-green');
+                        this.classList.remove('bg-green-600');
+                    }, 2000);
+                });
+            }
+        });
+
+        // Loyalty points redemption
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Canjear')) {
+                button.addEventListener('click', function() {
+                    const points = this.parentElement.querySelector('.text-nature-green').textContent;
+                    if (confirm(`¿Deseas canjear ${points} por esta recompensa?`)) {
+                        this.innerHTML = '✅ Canjeado';
+                        this.classList.remove('bg-nature-green');
+                        this.classList.add('bg-gray-400');
+                        this.disabled = true;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
