@@ -29,10 +29,10 @@
     <header class="bg-white shadow-lg fixed top-0 w-full z-50">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between py-4">
-                <div class="flex items-center space-x-2">
-                    <i class="fas fa-leaf text-3xl text-nature-green animate-pulse"></i>
-                    <span class="text-2xl font-bold bg-gradient-to-r from-nature-green to-leaf-green bg-clip-text text-transparent">MotherNature</span>
-                </div>
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+                    <i class="fas fa-leaf text-2xl text-nature-green animate-pulse"></i>
+                    <span class="text-xl font-bold bg-gradient-to-r from-nature-green to-leaf-green bg-clip-text text-transparent">MotherNature</span>
+                </a>
                 
                 <nav class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-gray-700 hover:text-nature-green transition-colors">Home</a>
@@ -44,34 +44,122 @@
                 </nav>
                 
                 <div class="flex items-center space-x-3">
-                    <!-- Search Button -->
-                    <button class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105">
-                        <i class="fas fa-search text-nature-green group-hover:text-white transition-colors duration-300"></i>
-                        <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                    <!-- Mobile Menu Button - Always Visible on Mobile -->
+                    <button id="mobile-menu-button" class="md:hidden group relative p-3 hover:bg-gray-200 hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105 z-50">
+                        <i id="menu-icon" class="fas fa-bars text-gray-600 group-hover:text-gray-800 transition-colors duration-300 text-lg"></i>
+                        <div class="absolute inset-0 bg-gray-200 opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
                     </button>
                     
-                    <!-- Shopping Cart Button -->
-                    <a href="checkout.html" class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105">
-                        <i class="fas fa-shopping-cart text-nature-green group-hover:text-white transition-colors duration-300"></i>
-                        <span class="absolute -top-1 -right-1 bg-gradient-to-r from-vibrant-orange to-coral-pink text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center shadow-lg animate-pulse border-2 border-white">3</span>
-                        <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
-                    </a>
-                    
-                    <!-- Login/Register Buttons -->
-                    <div class="hidden md:flex items-center space-x-2">
-                        <a href="login.html" class="px-4 py-2 text-nature-green hover:text-forest-green font-medium transition-colors">
-                            Login
+                    <!-- Desktop Actions - Hidden on Mobile -->
+                    <div class="hidden md:flex items-center space-x-3">
+                        <!-- Search Button -->
+                        <button class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105">
+                            <i class="fas fa-search text-nature-green group-hover:text-white transition-colors duration-300"></i>
+                            <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
+                        </button>
+                        
+                        <!-- Shopping Cart Button -->
+                        <a href="checkout.html" class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105">
+                            <i class="fas fa-shopping-cart text-nature-green group-hover:text-white transition-colors duration-300"></i>
+                            <span class="absolute -top-1 -right-1 bg-gradient-to-r from-vibrant-orange to-coral-pink text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center shadow-lg animate-pulse border-2 border-white">3</span>
+                            <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
                         </a>
-                        <a href="register.html" class="px-4 py-2 bg-gradient-to-r from-nature-green to-leaf-green text-white rounded-lg hover:from-forest-green hover:to-nature-green transition-all duration-300 transform hover:scale-105">
-                            Sign Up
+                        
+                        <!-- Profile Button -->
+                        <a href="profile.html" class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-nature-green">
+                            <i class="fas fa-user text-nature-green group-hover:text-white transition-colors duration-300"></i>
+                            <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
                         </a>
+                        
+                        <!-- Login/Register Buttons -->
+                        <!-- <div class="flex items-center space-x-2">
+                            <a href="login.html" class="px-4 py-2 text-nature-green hover:text-forest-green font-medium transition-colors">
+                                Login
+                            </a>
+                            <a href="register.html" class="px-4 py-2 bg-gradient-to-r from-nature-green to-leaf-green text-white rounded-lg hover:from-forest-green hover:to-nature-green transition-all duration-300 transform hover:scale-105">
+                                Sign Up
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden md:hidden">
+            <div class="fixed top-0 right-0 w-80 h-full bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50" id="mobile-menu-panel">
+                <div class="p-6">
+                    <!-- Close Button -->
+                    <div class="flex justify-between items-center mb-8">
+                        <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+                            <i class="fas fa-leaf text-2xl text-nature-green animate-pulse"></i>
+                            <span class="text-xl font-bold bg-gradient-to-r from-nature-green to-leaf-green bg-clip-text text-transparent">MotherNature</span>
+                        </a>
+                        <button id="mobile-menu-close" class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+                            <i class="fas fa-times text-gray-600 text-xl"></i>
+                        </button>
                     </div>
                     
-                    <!-- Profile Button -->
-                    <a href="profile.html" class="group relative p-3 hover:bg-nature-green hover:shadow-lg rounded-full transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-nature-green">
-                        <i class="fas fa-user text-nature-green group-hover:text-white transition-colors duration-300"></i>
-                        <div class="absolute inset-0 bg-nature-green opacity-0 group-hover:opacity-10 rounded-full transition-opacity duration-300"></div>
-                    </a>
+                    <!-- Mobile Navigation Links -->
+                    <nav class="space-y-4">
+                        <a href="index.html" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 text-gray-700 transition-colors">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="products.html" class="flex items-center space-x-3 p-3 rounded-lg bg-nature-green bg-opacity-10 text-nature-green font-semibold">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Products</span>
+                        </a>
+                        <a href="recipes.html" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 text-gray-700 transition-colors">
+                            <i class="fas fa-utensils"></i>
+                            <span>Recipes</span>
+                        </a>
+                        <a href="blog.html" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 text-gray-700 transition-colors">
+                            <i class="fas fa-blog"></i>
+                            <span>Blog</span>
+                        </a>
+                        <a href="about.html" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 text-gray-700 transition-colors">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="contact.html" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-100 text-gray-700 transition-colors">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </nav>
+                    
+                    <!-- Mobile Action Buttons -->
+                    <div class="mt-8 space-y-4">
+                        <!-- Search -->
+                        <button class="flex items-center justify-center space-x-2 w-full p-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
+                            <i class="fas fa-search"></i>
+                            <span>Search</span>
+                        </button>
+                        
+                        <!-- Cart -->
+                        <a href="checkout.html" class="flex items-center justify-center space-x-2 w-full p-3 bg-vibrant-orange text-white rounded-lg hover:bg-orange-600 transition-colors relative">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Cart (3)</span>
+                        </a>
+                        
+                        <!-- Profile -->
+                        <a href="profile.html" class="flex items-center justify-center space-x-2 w-full p-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                        
+                        <!-- Login -->
+                        <!-- <a href="login.html" class="flex items-center justify-center space-x-2 w-full p-3 border-2 border-nature-green text-nature-green rounded-lg hover:bg-nature-green hover:text-white transition-all">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Login</span>
+                        </a>
+                        
+                        <!-- Sign Up -->
+                        <a href="register.html" class="flex items-center justify-center space-x-2 w-full p-3 bg-gradient-to-r from-nature-green to-leaf-green text-white rounded-lg hover:from-forest-green hover:to-nature-green transition-all">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Sign Up</span>
+                        </a> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -501,6 +589,60 @@
                 } else {
                     this.classList.remove('fas', 'text-red-500');
                     this.classList.add('far', 'text-gray-400');
+                }
+            });
+        });
+    </script>
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const menuIcon = document.getElementById('menu-icon');
+            
+            function openMobileMenu() {
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenuPanel.classList.remove('translate-x-full');
+                }, 10);
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeMobileMenu() {
+                mobileMenuPanel.classList.add('translate-x-full');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+                document.body.style.overflow = '';
+            }
+            
+            mobileMenuButton.addEventListener('click', function() {
+                if (mobileMenu.classList.contains('hidden')) {
+                    openMobileMenu();
+                } else {
+                    closeMobileMenu();
+                }
+            });
+            
+            mobileMenuClose.addEventListener('click', closeMobileMenu);
+            
+            // Close menu when clicking outside
+            mobileMenu.addEventListener('click', function(e) {
+                if (e.target === mobileMenu) {
+                    closeMobileMenu();
+                }
+            });
+            
+            // Close menu on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                    closeMobileMenu();
                 }
             });
         });
